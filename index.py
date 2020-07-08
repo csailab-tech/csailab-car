@@ -84,6 +84,7 @@ class hello:
         elif name == "videon":
             os.system('python3 /usr/local/csailab-car/webcamera.py')
         elif name == "videoff":
+            move.motorStop()
             os.system('pkill -f webcamera.py')
         elif name == "ledon":
             select = web.input().select
@@ -137,6 +138,7 @@ class hello:
             speed = web.input().range1
             os.system('python3 /usr/local/csailab-car/findline.py %s' % (speed))
         elif name == "findlineoff":
+            move.motorStop()
             os.system('pkill -f findline.py')
         #move.motorStop()
         return render.index(name)
