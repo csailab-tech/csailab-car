@@ -138,7 +138,7 @@ class hello:
             speed = web.input().range1
             os.system('python3 /usr/local/csailab-car/findline.py %s' % (speed))
         elif name == "findlineoff":
-            move.motorStop()
+            move.destroy()
             os.system('pkill -f findline.py')
         #move.motorStop()
         return render.index(name)
