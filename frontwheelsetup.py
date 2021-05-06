@@ -3,6 +3,7 @@
 # Description : Setup front wheel
 # Author      : Koki GU
 # Date        : 2019/12/13
+import sys
 import time
 import Adafruit_PCA9685
 
@@ -14,12 +15,14 @@ pwm.set_pwm_freq(50)
 #pwm0_init = 300
 #pwm0_max  = 450
 #pwm0_min  = 150
-pwm0_init = 300
+pwm0_init = 288
 pwm0_max  = 450
 pwm0_min  = 150
 pwm0_pos  = pwm0_init
 
 turn_range = 80
+
+#n=int(sys.argv[1])
 
 def turn_ctrl(direction):
     if direction == 'left':
@@ -52,9 +55,10 @@ if __name__ == '__main__':
     turn_ctrl('middle')
     print(pwm0_pos)
     time.sleep(1)
-    '''turn_n(50)
+    '''turn_n(n)
     time.sleep(1)
-    turn_n(20)
+    turn_ctrl('middle')
+    print(pwm0_pos)
     time.sleep(1)'''
 
 #    turn_ctrl('left')

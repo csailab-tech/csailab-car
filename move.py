@@ -101,7 +101,7 @@ def destroy():
 if __name__ == '__main__':
 	try:
 		setup()
-		move(55, 'forward')
+		move(60, 'forward')
 		time.sleep(1)
 		motorStop()
 		destroy()
