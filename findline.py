@@ -73,7 +73,7 @@ def run(speed):
                 i = 1;
             print('i :', i)
             #10 80
-            if i > 80:
+            if i > 10:
                 sys.exit()
             cover = 1
         move.move(speed, 'forward')
